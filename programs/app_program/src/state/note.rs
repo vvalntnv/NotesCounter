@@ -7,5 +7,4 @@ pub struct NoteData {
     #[size(200)]
     pub content: String,
     pub last_edited: i64,
-    pub note_id: u64,
 }

@@ -232,6 +232,7 @@ name = "app_program"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",
+ "counter_service",
  "shared",
 ]
 
