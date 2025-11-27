@@ -28,7 +28,7 @@ use proc_macro::TokenStream;
 use quote::quote; // Helps generate Rust code
 use syn::{parse_macro_input, DataStruct, DeriveInput, Fields};
 
-use crate::size_calculator::get_type_size; // Helps parse Rust code
+use size_calculator::get_type_size; // Helps parse Rust code
 
 // ============================================================================
 // THE MAIN MACRO FUNCTION

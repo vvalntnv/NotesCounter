@@ -9,7 +9,3 @@ pub struct NoteData {
     pub last_edited: i64,
     pub note_id: u64,
 }
-
-// impl SpacyTrait for NoteData {
-//     const SIZE: usize = 1000;
-// }
