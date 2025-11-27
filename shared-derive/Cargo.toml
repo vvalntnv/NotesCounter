@@ -1,0 +1,25 @@
+[package]
+name = "shared-derive"
+version = "0.1.0"
+edition = "2021"
+
+# This tells Cargo that this crate is a procedural macro crate
+# Proc macros MUST be in their own separate crate - this is a Rust requirement
+[lib]
+proc-macro = true
+
+[dependencies]
+# syn: Parses Rust code into a syntax tree you can work with
+# Features:
+# - "full": Parse all Rust syntax (structs, enums, functions, etc.)
+# - "derive": Helpers specifically for derive macros
+# - "parsing": Tools for parsing custom syntax
+syn = { version = "2.0", features = ["full", "derive", "parsing"] }
+
+# quote: Helps you generate Rust code
+# You write code that looks like Rust, and it generates the token stream
+quote = "1.0"
+
+# proc-macro2: A wrapper around the compiler's proc_macro that's easier to work with
+# This is re-exported by syn and quote, but included here for clarity
+proc-macro2 = "1.0"
