@@ -11,11 +11,11 @@ declare_id!("RU8qag4xkWaDZA4edLmxmNbCUAzWbevWqFnJVTX1kSS");
 pub mod counter_service {
     use super::*;
 
-    pub fn create_user_stats(ctx: Context<CreateUserStats>) -> Result<()> {
-        instructions::create_user_stats::handler(ctx)
+    pub fn increment_on_create(ctx: Context<IncrementOnCreate>) -> Result<()> {
+        instructions::increment_on_create::_increment_on_create(ctx)
     }
 
-    pub fn increment_on_create(ctx: Context<IncrementOnCreate>) -> Result<()> {
-        instructions::increment_on_create::handler(ctx)
+    pub fn increment_on_edit(ctx: Context<IncrementOnEdit>) -> Result<()> {
+        instructions::increment_on_edit::_increment_on_edit(ctx)
     }
 }

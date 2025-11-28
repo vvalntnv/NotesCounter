@@ -14,6 +14,10 @@ pub mod app_program {
     use super::*;
 
     pub fn create_note(ctx: Context<CreateNote>, content: String) -> Result<()> {
-        instructions::create_note::handler(ctx, content)
+        instructions::create_note::_create_note(ctx, content)
+    }
+
+    pub fn edit_note(ctx: Context<EditNote>, new_content: String) -> Result<()> {
+        instructions::edit_note::_edit_note(ctx, new_content)
     }
 }
